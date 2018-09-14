@@ -17,7 +17,7 @@ public class Account {
     public void expenses(double money,String details) throws Exception {
         balance -= money;
         list.add(new AccountNormal(money,details,"-"));
-        if(money > balance) {
+        if(balance < 0) {
                 throw new Exception("Caution your expenses more than balance\n");
         }
     }
@@ -33,5 +33,8 @@ public class Account {
 
     public double getBalance() {
         return balance;
+    }
+    void setBalance(int balance){
+        this.balance = balance;
     }
 }

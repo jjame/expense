@@ -18,9 +18,10 @@ public class StepDefAc {
         ledgerAccount = new Account();
     }
 
+
     @Given("a user have balance (\\d+) exists")
     public void a_user_have_balance_exists(int balance){
-        ledgerAccount.getBalance();
+        ledgerAccount.setBalance(balance);
 
     }
 
