@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 public class Main {
-    public void start() {
+    public static void main(String[] args) throws Exception {
+
         Account ac;
         ac = new Account();
         Scanner in = new Scanner(System.in);
@@ -23,6 +24,7 @@ public class Main {
                     System.out.print("Enter your Details : ");
                     in.useDelimiter("\n");
                     String details = in.next();
+                    ac.expenses(expenses,details);
 
                 }
                 else if(number == 0){
